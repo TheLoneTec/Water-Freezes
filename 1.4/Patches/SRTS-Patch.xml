@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>SRTS Expanded</li>
+		</mods>
+		<match Class="PatchOperationConditional">
+			<xpath>Defs/ThingDef[@Name="NECShipBase"]/building/buildingTags</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[@Name="NECShipBase"]/building/buildingTags</xpath>
+				<value>
+					<li>DoesNotSink</li>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationConditional">
+				<xpath>Defs/ThingDef[@Name="NECShipBase"]/building</xpath>
+				<match Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="NECShipBase"]/building</xpath>
+					<value>
+						<buildingTags>
+							<li>DoesNotSink</li>
+						</buildingTags>
+					</value>
+				</match>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[@Name="NECShipBase"]</xpath>
+					<value>
+						<building>
+							<buildingTags>
+								<li>DoesNotSink</li>
+							</buildingTags>
+						</building>
+					</value>
+				</nomatch>
+			</nomatch>
+		</match>
+	</Operation>
+</Patch>
