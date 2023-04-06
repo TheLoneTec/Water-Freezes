@@ -1,7 +1,61 @@
 <Patch>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs</xpath>
+		<value>
+			<ThingDef ParentName="SK_BuildingBase">
+				<defName>HSK_IceFishingSpot</defName>
+				<label>ice fishing spot</label>
+				<description>A simple ive fishing spot. Not ideal, but better than nothing.</description>
+				<thingClass>SK.Building_FishingPier</thingClass>
+				<tickerType>Rare</tickerType>
+				<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+				<graphicData>
+					<texPath>Things/Building/Fishing/IceFishingSpot</texPath>
+					<graphicClass>Graphic_Single</graphicClass>
+					<drawSize>(1,1)</drawSize>
+				</graphicData>
+				<altitudeLayer>Building</altitudeLayer>
+				<useHitPoints>True</useHitPoints>
+				<statBases>
+					<WorkToBuild>1500</WorkToBuild>
+					<MaxHitPoints>50</MaxHitPoints>
+					<Beauty>0</Beauty>
+					<Flammability>0</Flammability>
+				</statBases>
+				<size>(1,1)</size>
+				<passability>Standable</passability>
+				<hasInteractionCell>True</hasInteractionCell>
+				<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+				<surfaceType>Item</surfaceType>
+				<designationCategory>Production</designationCategory>
+				<inspectorTabs>
+					<li>ITab_Bills</li>
+				</inspectorTabs>
+				<building>
+					<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+				</building>
+				<comps>
+					<li Class="CompProperties_Forbiddable"/>
+				</comps>
+				<constructionSkillPrerequisite>1</constructionSkillPrerequisite>
+				<terrainAffordanceNeeded>IceFishable</terrainAffordanceNeeded>
+				<researchPrerequisites>
+					<li>Fish_A1</li>
+				</researchPrerequisites>
+			</ThingDef>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationInsert">
+		<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Fishing"]/defNames/li[text()="HSK_FishTrap"]</xpath>
+		<value>
+			<li>HSK_IceFishingSpot</li>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TerrainDef[defName="WaterShallow"]</xpath>
+		<xpath>Defs/TerrainDef[defName="WaterShallow"]</xpath>
 		<value>
 			<li Class="WF.TerrainExtension_WaterStats">
 				<MaxWaterDepth>100</MaxWaterDepth>
@@ -13,7 +67,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TerrainDef[defName="WaterDeep"]</xpath>
+		<xpath>Defs/TerrainDef[defName="WaterDeep"]</xpath>
 		<value>
 			<li Class="WF.TerrainExtension_WaterStats">
 				<MaxWaterDepth>400</MaxWaterDepth>
@@ -26,7 +80,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TerrainDef[defName="WaterMovingShallow"]</xpath>
+		<xpath>Defs/TerrainDef[defName="WaterMovingShallow"]</xpath>
 		<value>
 			<li Class="WF.TerrainExtension_WaterStats">
 				<MaxWaterDepth>100</MaxWaterDepth>
@@ -40,7 +94,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TerrainDef[defName="WaterMovingChestDeep"]</xpath>
+		<xpath>Defs/TerrainDef[defName="WaterMovingChestDeep"]</xpath>
 		<value>
 			<li Class="WF.TerrainExtension_WaterStats">
 				<MaxWaterDepth>400</MaxWaterDepth>
@@ -55,7 +109,7 @@
 	</Operation>
 	
 	<Operation Class="PatchOperationAddModExtension">
-		<xpath>/Defs/TerrainDef[defName="Marsh"]</xpath>
+		<xpath>Defs/TerrainDef[defName="Marsh"]</xpath>
 		<value>
 			<li Class="WF.TerrainExtension_WaterStats">
 				<MaxWaterDepth>70</MaxWaterDepth>
@@ -65,5 +119,34 @@
 			</li>
 		</value>
 	</Operation>
+	
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Celsius</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="HSK_FishTrap"]/building</xpath>
+                    <value>
+						<buildingTags>
+							<li>DoesNotSink</li>
+						</buildingTags>
+                    </value>
+                </li>
+				
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[@Name="CrashedShipPartBase"]/building</xpath>
+                    <value>
+						<buildingTags>
+							<li>DoesNotSink</li>
+						</buildingTags>
+                    </value>
+                </li>
+  
+            </operations>
+        </nomatch>
+    </Operation>
 	
 </Patch>
