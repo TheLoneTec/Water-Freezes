@@ -54,6 +54,13 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/TerrainDef[contains(defName,"WF_")]/affordances</xpath>
+		<value>
+			<li>IceFishable</li>
+		</value>
+	</Operation>
+
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/TerrainDef[defName="WaterShallow"]</xpath>
 		<value>
