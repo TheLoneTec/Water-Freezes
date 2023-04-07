@@ -13,6 +13,8 @@
 				<graphicData>
 					<texPath>Things/Building/Fishing/IceFishingSpot</texPath>
 					<graphicClass>Graphic_Single</graphicClass>
+					<shaderType>Transparent</shaderType>
+					<color>(220,220,220,160)</color>
 					<drawSize>(1,1)</drawSize>
 				</graphicData>
 				<altitudeLayer>Building</altitudeLayer>
@@ -49,6 +51,13 @@
 
 	<Operation Class="PatchOperationInsert">
 		<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Fishing"]/defNames/li[text()="HSK_FishTrap"]</xpath>
+		<value>
+			<li>HSK_IceFishingSpot</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef[defName="MakeFishingBait"]/recipeUsers</xpath>
 		<value>
 			<li>HSK_IceFishingSpot</li>
 		</value>
