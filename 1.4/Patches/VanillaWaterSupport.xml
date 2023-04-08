@@ -70,6 +70,23 @@
 		</value>
 	</Operation>
 
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/TerrainDef[contains(defName,"WF_")]/tags</xpath>
+			<match Class="PatchOperationAdd">
+				<xpath>Defs/TerrainDef[contains(defName,"WF_")]/tags</xpath>
+				<value>
+					<li>Frozen</li>
+				</value>
+			</match>
+			<nomatch>
+				<value>
+					<tags>
+						<li>Frozen</li>
+					</tags>
+				</value>
+			</nomatch>
+	</Operation>
+
 	<Operation Class="PatchOperationAddModExtension">
 		<xpath>Defs/TerrainDef[defName="WaterShallow"]</xpath>
 		<value>
