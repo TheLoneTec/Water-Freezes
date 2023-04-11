@@ -3,52 +3,103 @@
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs</xpath>
 		<value>
-			<ThingDef ParentName="SK_BuildingBase">
-				<defName>HSK_IceFishingSpot</defName>
-				<label>ice fishing spot</label>
-				<description>A simple ive fishing spot. Not ideal, but better than nothing.</description>
-				<thingClass>SK.Building_FishingPier</thingClass>
-				<tickerType>Rare</tickerType>
-				<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
-				<graphicData>
-					<texPath>Things/Building/Fishing/IceFishingSpot</texPath>
-					<graphicClass>Graphic_Single</graphicClass>
-					<shaderType>Transparent</shaderType>
-					<color>(220,220,220,160)</color>
-					<drawSize>(1,1)</drawSize>
-				</graphicData>
-				<altitudeLayer>Building</altitudeLayer>
-				<useHitPoints>True</useHitPoints>
-				<statBases>
-					<WorkToBuild>1500</WorkToBuild>
-					<MaxHitPoints>50</MaxHitPoints>
-					<Beauty>0</Beauty>
-					<Flammability>0</Flammability>
-				</statBases>
-				<size>(1,1)</size>
-				<passability>Standable</passability>
-				<hasInteractionCell>True</hasInteractionCell>
-				<interactionCellOffset>(0,0,-1)</interactionCellOffset>
-				<surfaceType>Item</surfaceType>
-				<designationCategory>Production</designationCategory>
-				<inspectorTabs>
-					<li>ITab_Bills</li>
-				</inspectorTabs>
-				<building>
-					<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
-				</building>
-				<comps>
-					<li Class="CompProperties_Forbiddable"/>
-				</comps>
-				<constructionSkillPrerequisite>1</constructionSkillPrerequisite>
-				<terrainAffordanceNeeded>IceFishable</terrainAffordanceNeeded>
-				<researchPrerequisites>
-					<li>Fish_A1</li>
-				</researchPrerequisites>
-			</ThingDef>
+		<!--
+		<ThingDef ParentName ="FishingPierSpawnerBase">
+			<defName>HSK_IceFishingSpotSpawner</defName>
+			<label>ice fishing spot</label>
+			<description>A simple ice fishing spot. Not ideal, but better than nothing.</description>
+			<thingClass>SK.Building_FishingPierSpawner</thingClass>
+			<graphicData>
+				<texPath>Things/Building/Fishing/IceFishingSpotSpawner</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>(1,1)</drawSize>
+			</graphicData>
+			<uiIconPath>Things/Building/Fishing/IceFishingSpot_south</uiIconPath>
+			<terrainAffordanceNeeded>IceFishable</terrainAffordanceNeeded>
+			<altitudeLayer>Building</altitudeLayer>
+			<placeWorkers>
+				<li>SK.PlaceWorker_FishingPierSpawner</li>
+			</placeWorkers>
+			<stuffCategories IsNull="True"/>
+			<costStuffCount IsNull="True"/>
+			<costList IsNull="True"/>
+			<useHitPoints>True</useHitPoints>
+			<statBases>
+				<WorkToBuild>1500</WorkToBuild>
+				<MaxHitPoints>50</MaxHitPoints>
+				<Beauty>0</Beauty>
+				<Flammability>0</Flammability>
+			</statBases>
+			<size>(1,1)</size>
+			<designationCategory>Production</designationCategory>
+			<passability>Standable</passability>
+			<hasInteractionCell>True</hasInteractionCell>
+			<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+			<surfaceType>Item</surfaceType>
+			<inspectorTabs>
+				<li>ITab_Bills</li>
+			</inspectorTabs>
+			<building>
+				<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			</building>
+			<researchPrerequisites>
+				<li>Fish_A1</li>
+			</researchPrerequisites>
+		</ThingDef>
+		-->
+		<ThingDef ParentName="SK_BuildingBase">
+			<defName>HSK_IceFishingSpot</defName>
+			<label>ice fishing spot</label>
+			<description>A simple ice fishing spot. Not ideal, but better than nothing.</description>
+			<thingClass>SK.Building_FishingPier</thingClass>
+			<tickerType>Rare</tickerType>
+			<soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+			<graphicData>
+				<texPath>Things/Building/Fishing/IceFishingSpot</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<shaderType>Transparent</shaderType>
+				<color>(220,220,220,200)</color>
+				<drawSize>(1,1)</drawSize>
+			</graphicData>
+			<altitudeLayer>Building</altitudeLayer>
+			<useHitPoints>True</useHitPoints>
+			<placeWorkers>
+				<li>WF.PlaceWorker_IceFishingSpot</li>
+			</placeWorkers>
+			<statBases>
+				<WorkToBuild>1500</WorkToBuild>
+				<MaxHitPoints>50</MaxHitPoints>
+				<Beauty>0</Beauty>
+				<Flammability>0</Flammability>
+			</statBases>
+			<size>(1,1)</size>
+			<passability>Standable</passability>
+			<hasInteractionCell>True</hasInteractionCell>
+			<interactionCellOffset>(0,0,-1)</interactionCellOffset>
+			<surfaceType>Item</surfaceType>
+			<designationCategory>Production</designationCategory>
+			<inspectorTabs>
+				<li>ITab_Bills</li>
+			</inspectorTabs>
+			<building>
+				<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+			</building>
+			<comps>
+				<li Class="CompProperties_Forbiddable"/>
+			</comps>
+			<constructionSkillPrerequisite>1</constructionSkillPrerequisite>
+			<terrainAffordanceNeeded>IceFishable</terrainAffordanceNeeded>
+		</ThingDef>
 		</value>
 	</Operation>
-
+<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/WorkGiverDef[defName="WorkGiver_FishAtFishingPier"]/fixedBillGiverDefs</xpath>
+		<value>
+			<li>HSK_IceFishingSpot</li>
+		</value>
+	</Operation>
+-->
 	<Operation Class="PatchOperationInsert">
 		<xpath>Defs/ArchitectSense.DesignationSubCategoryDef[defName="SubCategory_Fishing"]/defNames/li[text()="HSK_FishTrap"]</xpath>
 		<value>
@@ -78,7 +129,8 @@
 					<li>Frozen</li>
 				</value>
 			</match>
-			<nomatch>
+			<nomatch Class="PatchOperationAdd">
+				<xpath>Defs/TerrainDef[contains(defName,"WF_")]</xpath>
 				<value>
 					<tags>
 						<li>Frozen</li>
