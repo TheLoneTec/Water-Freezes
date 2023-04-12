@@ -83,6 +83,9 @@
 			</inspectorTabs>
 			<building>
 				<spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+				<buildingTags>
+					<li>DoesNotSink</li>
+				</buildingTags>
 			</building>
 			<comps>
 				<li Class="CompProperties_Forbiddable"/>
@@ -211,7 +214,7 @@
         </mods>
         <nomatch Class="PatchOperationSequence">
             <operations>
-
+<!--
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/ThingDef[defName="HSK_FishingSpotSpawner"]/building</xpath>
                     <value>
@@ -220,7 +223,7 @@
 						</buildingTags>
                     </value>
                 </li>
-
+-->
                 <li Class="PatchOperationAdd">
                     <xpath>Defs/ThingDef[defName="HSK_FishTrap"]/building</xpath>
                     <value>
