@@ -92,9 +92,13 @@
 			</comps>
 			<constructionSkillPrerequisite>1</constructionSkillPrerequisite>
 			<terrainAffordanceNeeded>IceFishable</terrainAffordanceNeeded>
+			<researchPrerequisites>
+				<li>Fish_A1</li>
+			</researchPrerequisites>
 		</ThingDef>
 		</value>
 	</Operation>
+	
 <!--
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/WorkGiverDef[defName="WorkGiver_FishAtFishingPier"]/fixedBillGiverDefs</xpath>
