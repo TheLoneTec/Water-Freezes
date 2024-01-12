@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>Defs/ThingDef/building[isResourceRock="True" or isResourceRock="true" or isNaturalRock="True" or isNaturalRock="true"]/buildingTags</xpath>
+		<match Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef/building[isResourceRock="True" or isResourceRock="true" or isNaturalRock="True" or isNaturalRock="true"]/buildingTags</xpath>
+			<value>
+				<li>DoesNotSink</li>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>Defs/ThingDef/building[isResourceRock="True" or isResourceRock="true" or isNaturalRock="True" or isNaturalRock="true" and not(buildingTags)]</xpath>
+			<value>
+				<buildingTags>
+					<li>DoesNotSink</li>
+				</buildingTags>
+			</value>
+		</nomatch>
+	</Operation>
+<!--
 	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef/building[isResourceRock="True" or isResourceRock="true"]</xpath>
+		<xpath>Defs/ThingDef/building[isResourceRock="True" or isResourceRock="true" or isNaturalRock="True" or isNaturalRock="true"]</xpath>
 		<value>
 			<buildingTags>
 				<li>DoesNotSink</li>
 			</buildingTags>
 		</value>
 	</Operation>
+	-->
 </Patch>
