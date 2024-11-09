@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\kacey\Downloads\Water-Freezes-main\Water-Freezes-main\1.3\Assemblies\UdderlyEvelyn.WaterFreezes.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{37B59FAB-16C4-4BB6-9A4C-A438E9DBB593}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>UdderlyEvelyn.WaterFreezes</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <ApplicationVersion>1.1.5.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>WF</RootNamespace>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Core_SK">
+      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\Core_SK.dll</HintPath>
+    </Reference>
+    <Reference Include="FertileFields">
+      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\FertileFields.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API.cs" />
+    <Compile Include="Harmony Patches\FertileFields_Building_Terraform_PlaceProduct.cs" />
+    <Compile Include="PlaceWorker_IceFishingSpot.cs" />
+    <Compile Include="WorkGiver_IceFishing.cs" />
+    <Compile Include="DebugActionsWaterFreezes.cs" />
+    <Compile Include="Defs\BuildingDefs.cs" />
+    <Compile Include="Harmony Patches\CompTerrainPumpDry_AffectCell.cs" />
+    <Compile Include="Harmony Patches\TerrainGrid_DoTerrainChangedEffects.cs" />
+    <Compile Include="TerrainExtension_WaterStats.cs" />
+    <Compile Include="TerrainDefExtensions.cs" />
+    <Compile Include="WaterFreezesCompCache.cs" />
+    <Compile Include="Harmony Patches\MouseoverReadout_MouseoverReadoutOnGUI.cs" />
+    <Compile Include="Harmony Patches\Building_FishingPierSpawner_Patch.cs" />
+    <Compile Include="Harmony Patches\TerrainGrid_SetTerrain.cs" />
+    <Compile Include="ToggleablePatch.cs" />
+    <Compile Include="ToggleablePatchExtensions.cs" />
+    <Compile Include="IToggleablePatch.cs" />
+    <Compile Include="ToggleablePatch`1.cs" />
+    <Compile Include="ToggleablePatchGroup.cs" />
+    <Compile Include="Defs\WaterDefs.cs" />
+    <Compile Include="Defs\IceDefs.cs" />
+    <Compile Include="WaterFreezes.cs" />
+    <Compile Include="ErrorLevel.cs" />
+    <Compile Include="WaterFreezesMod.cs" />
+    <Compile Include="MapComponent_WaterFreezes.cs" />
+    <Compile Include="WaterFreezesSettings.cs" />
+    <Compile Include="WaterFreezesStatCache.cs" />
+    <Compile Include="Harmony Patches\SnowGrid_SetDepth.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
