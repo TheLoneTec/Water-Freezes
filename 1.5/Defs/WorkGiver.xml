@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<WorkGiverDef>
+		<defName>WorkGiver_FishAtIceFishingSpot</defName>
+		<giverClass>WF.WorkGiver_IceFishing</giverClass>
+		<workType>Hunting</workType>
+		<priorityInType>89</priorityInType>
+		<fixedBillGiverDefs>
+			<li>HSK_IceFishingSpot</li>
+		</fixedBillGiverDefs>
+		<verb>fish</verb>
+		<gerund>fishing</gerund>
+		<tagToGive>Fieldwork</tagToGive>
+		<requiredCapacities>
+			<li>Manipulation</li>
+		</requiredCapacities>
+	</WorkGiverDef>
+	
+</Defs>

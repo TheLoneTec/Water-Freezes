@@ -41,23 +41,13 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\0Harmony.dll</HintPath>
-    </Reference>
     <Reference Include="Core_SK">
-      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\Core_SK.dll</HintPath>
+      <HintPath>..\..\HardcoreSK\Hardcore-SK-Source\R1.5\Assemblies\Core_SK.dll</HintPath>
     </Reference>
     <Reference Include="FertileFields">
-      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\FertileFields.dll</HintPath>
+      <HintPath>..\..\HardcoreSK\Hardcore-SK-Source\R1.5\Assemblies\FertileFields.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\UnityEngine.CoreModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\Users\kacey\Documents\GitHub\PacasForks\Hardcore-SK-Source\R1.4\Assemblies\UnityEngine.IMGUIModule.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API.cs" />

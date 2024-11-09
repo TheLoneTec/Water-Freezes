@@ -774,11 +774,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kacey\\Documents\\GitHub\\Water-Freezes\\Source\\UdderlyEvelyn.WaterFreezes.csproj",
+      "projectUniqueName": "E:\\Users\\kacey\\Documents\\GitHub\\Water-Freezes\\Source\\UdderlyEvelyn.WaterFreezes.csproj",
       "projectName": "UdderlyEvelyn.WaterFreezes",
-      "projectPath": "C:\\Users\\kacey\\Documents\\GitHub\\Water-Freezes\\Source\\UdderlyEvelyn.WaterFreezes.csproj",
+      "projectPath": "E:\\Users\\kacey\\Documents\\GitHub\\Water-Freezes\\Source\\UdderlyEvelyn.WaterFreezes.csproj",
       "packagesPath": "C:\\Users\\kacey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kacey\\Documents\\GitHub\\Water-Freezes\\Source\\obj\\",
+      "outputPath": "E:\\Users\\kacey\\Documents\\GitHub\\Water-Freezes\\Source\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
