@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "5MXv2uOPBUePoF7j3Qop5XxjFrVsZglqBoPKsdZodd8XG65nXr6yB8wAXWNYjIxaFpTdEV5O9cxdtgw47zWE1Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kacey\\Documents\\GitHub\\Water-Freezes\\Source\\UdderlyEvelyn.WaterFreezes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kacey\\.nuget\\packages\\krafs.publicizer\\2.0.1\\krafs.publicizer.2.0.1.nupkg.sha512",
+    "C:\\Users\\kacey\\.nuget\\packages\\krafs.rimworld.ref\\1.5.4243\\krafs.rimworld.ref.1.5.4243.nupkg.sha512",
+    "C:\\Users\\kacey\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}
