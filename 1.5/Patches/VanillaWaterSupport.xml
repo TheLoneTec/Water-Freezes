@@ -244,7 +244,7 @@
                 </li>
   
                 <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[@Name="WaterproofConduit"]/building</xpath>
+                    <xpath>Defs/ThingDef[defName="WaterproofConduit"]/building</xpath>
                     <value>
 						<buildingTags>
 							<li>DoesNotSink</li>
